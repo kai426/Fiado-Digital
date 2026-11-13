@@ -1,0 +1,18 @@
+import type { ReactNode } from "react"
+
+export default function Field({
+  label,
+  hint,
+  children,
+}: {
+  label: string
+  hint?: string
+  children: ReactNode
+}) {
+  return (
+    <label className="field">
+      <span>{label} {hint && <em>{hint}</em>}</span>
+      {children}
+    </label>
+  )
+}
